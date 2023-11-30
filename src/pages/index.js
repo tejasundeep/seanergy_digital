@@ -18,6 +18,7 @@ const Home = () => {
             <main>
                 <NavBar />
                 <Banner bannerText={bannerData} />
+                
             </main>        
         </>
     );

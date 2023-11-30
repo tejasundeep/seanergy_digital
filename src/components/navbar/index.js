@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import Image from "next/legacy/image";
 import Link from 'next/link';
 import navLinks from './navLinks';
+import { useTheme } from '../themeSwitcher';
 
 const RenderNavLink = memo(({ item }) => {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -34,9 +35,10 @@ RenderNavLink.displayName = 'RenderNavLink';
 
 const NavBar = () => {
     const memoizedNavLinks = useMemo(() => navLinks, []);
+    const { theme, toggleTheme } = useTheme();
 
     return (
-        <Navbar bg="light" expand="lg" fixed="top" className='py-4'>
+        <Navbar data-bs-theme={theme} expand="lg" fixed="top" className='py-4'>
             <Container>
                 <Navbar.Brand href="#home">
                     <Image
@@ -54,6 +56,7 @@ const NavBar = () => {
                         {memoizedNavLinks.map((item, index) => (
                             <RenderNavLink key={index} item={item} />
                         ))}
+                        <button className='btn btn-white' onClick={toggleTheme}>{theme === 'light' ? "🌙" : "🌞"}</button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

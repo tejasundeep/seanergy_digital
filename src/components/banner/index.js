@@ -1,8 +1,9 @@
+import React, { useMemo } from 'react';
 import styles from "@/styles/Home.module.scss";
 import Image from "next/legacy/image";
 
-const Banner = ({ bannerText }) => {
-    const blurDataUrl = (bannerText.image);
+const Banner = React.memo(({ bannerText }) => {
+    const blurDataUrl = useMemo(() => bannerText.image, [bannerText.image]);
 
     return (
         <section className={styles.banner}>
@@ -14,6 +15,6 @@ const Banner = ({ bannerText }) => {
             </div>
         </section>
     );
-};
+});
 
 export default Banner;
