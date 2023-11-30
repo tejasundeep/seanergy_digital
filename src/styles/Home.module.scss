@@ -1,0 +1,56 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 9rem 0;
+    margin-top: 6rem;
+
+    h3 {
+        position: relative;
+        width: 100%;
+        font-size: 73px;
+        font-weight: normal;
+        color: #fff;
+        background-image: url(https://www.seanergydigital.com/img/Orange_line_big.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    p {
+        position: relative;
+        font-size: 38px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    a {
+        position: relative;
+        background-color: #4aacff;
+        border: 0;
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 20px 35px 20px 60px;
+    }
+
+    a:hover {
+        background-color:#ffdd36;
+    }
+
+    a:before {
+        position: absolute;
+        content: "";
+        background-image: url(https://www.seanergydigital.com/img/Button_arrow.png);
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 16px;
+        top: 24px;
+        left: 25px;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
+    a:hover:before {	
+	    left:35px;
+    }
+}
