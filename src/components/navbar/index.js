@@ -1,4 +1,4 @@
-import React, { useMemo, memo, useState } from 'react';
+import React, { useMemo, useCallback, memo, useState } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import Image from "next/legacy/image";
 import Link from 'next/link';
@@ -7,13 +7,8 @@ import navLinks from './navLinks';
 const RenderNavLink = memo(({ item }) => {
     const [showDropdown, setShowDropdown] = useState(false);
 
-    const handleMouseEnter = () => {
-        setShowDropdown(true);
-    };
-
-    const handleMouseLeave = () => {
-        setShowDropdown(false);
-    };
+    const handleMouseEnter = useCallback(() => setShowDropdown(true), []);
+    const handleMouseLeave = useCallback(() => setShowDropdown(false), []);
 
     return (
         item.dropdownItems ? (
@@ -34,6 +29,8 @@ const RenderNavLink = memo(({ item }) => {
         )
     );
 });
+
+RenderNavLink.displayName = 'RenderNavLink';
 
 const NavBar = () => {
     const memoizedNavLinks = useMemo(() => navLinks, []);
