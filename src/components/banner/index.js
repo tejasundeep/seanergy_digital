@@ -7,7 +7,16 @@ const Banner = React.memo(({ bannerText }) => {
 
     return (
         <section className={styles.banner}>
-            <Image src={bannerText.image} alt="Banner" layout="fill" blurDataURL={blurDataUrl} placeholder="blur" objectFit="cover" quality={100} priority />
+            <Image 
+                src={bannerText.image} 
+                alt="Banner" 
+                layout="fill" 
+                blurDataURL={blurDataUrl} 
+                placeholder="blur" 
+                objectFit="cover" 
+                quality={100} 
+                priority 
+            />
             <div className={bannerText.align}>
                 <h3 className="pb-4" dangerouslySetInnerHTML={{ __html: bannerText.title && bannerText.title }} />
                 <p className="my-4">{bannerText.description && bannerText.description}</p>
@@ -16,5 +25,7 @@ const Banner = React.memo(({ bannerText }) => {
         </section>
     );
 });
+
+Banner.displayName = 'Banner';
 
 export default Banner;
