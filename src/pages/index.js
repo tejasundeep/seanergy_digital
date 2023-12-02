@@ -1,6 +1,7 @@
 import MetaData from "@/components/head";
 import NavBar from "@/components/navbar";
 import Banner from "@/components/banner";
+import Industries from "@/components/industries";
 
 const Home = () => {
     const bannerData = {
@@ -23,6 +24,7 @@ const Home = () => {
             <main>
                 <NavBar />
                 <Banner bannerText={bannerData} />
+                <Industries />
             </main>
         </>
     );

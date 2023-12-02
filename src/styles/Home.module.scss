@@ -54,3 +54,101 @@
 	    left:35px;
     }
 }
+
+
+.industries {
+    h1 {
+        position: relative;
+        font-size: 58px;
+        text-align: center;
+        margin: 2rem auto;
+    }
+    h1::after {
+        content: url(https://www.seanergydigital.com/img/Orange_line.png);
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        margin: 3rem auto;
+    }
+    &__col {
+        padding: 0.3rem;
+        &__transport, &__healthcare, &__development, &__logistics {
+            color: #ffffff;
+        }
+        @keyframes slide {
+            from {width: 10%;}
+            to {width: 100%;}
+          }
+        &__transport:hover::before, &__healthcare:hover::before, &__development:hover::before, &__logistics:hover::before {
+            content: "";
+            position: absolute;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            opacity: 0.75;
+            border-radius: 5px;
+            animation-name: slide;
+            animation-duration: 0.75s;
+        }
+        &__transport:hover::after, &__healthcare:hover::after, &__development:hover::after, &__logistics:hover::after {
+            content: "";
+            background-image: url(/search.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 108px;
+            height: 108px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border-radius: 5px;
+            z-index: 2;
+        }
+        &__transport {
+            background-image: url(/transport.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &__body{
+                padding: 27.85rem 1rem 20px 20px;
+                z-index: 9;
+                @media (max-width: 768px) {
+                    padding: 10.5rem 0px 20px 20px;
+                }
+            }
+        }
+        &__healthcare {
+            background-image: url(/healthcare.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 0.5rem;
+            &__body{
+                padding: 10.5rem 0px 20px 20px;
+                z-index: 9;
+            }
+        }
+        &__development {
+            background-image: url(/development.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &__body{
+                padding: 10.5rem 0px 20px 20px;
+                z-index: 9;
+            }
+        }
+        &__logistics {
+            background-image: url(/logistics.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &__body{
+                padding: 10.5rem 0px 20px 20px;
+                z-index: 9;
+            }
+        }
+    }
+}

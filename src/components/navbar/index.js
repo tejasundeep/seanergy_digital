@@ -56,7 +56,7 @@ const NavBar = () => {
                         {memoizedNavLinks.map((item, index) => (
                             <RenderNavLink key={index} item={item} />
                         ))}
-                        <button className='btn btn-white' onClick={toggleTheme}>{theme === 'light' ? "🌙" : "🌞"}</button>
+                        <button className='btn btn-white' onClick={toggleTheme}>{theme === 'light' ? "🌕" : "🌞"}</button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
