@@ -29,3 +29,16 @@ img {
         }
     }
 }
+
+.navbar-nav{
+    a {
+        font-weight: bold;  
+        margin: 0 0.85rem;
+        line-height: 3rem;    
+    }
+    button {
+        font-size: 2rem;
+        border: 0;
+        box-shadow: none;  
+    }
+}
