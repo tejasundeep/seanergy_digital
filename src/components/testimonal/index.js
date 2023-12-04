@@ -31,9 +31,9 @@ const Testimonials = () => {
             <Container>
                 <Row>
                     <Col md={7} className="mx-auto">
-                        <h2>Testimonials</h2>
-                        <p>What our customers say about our work</p>
-                        <Card className="pt-4 p-3">
+                        <h1 className={styles["testimonial__title"]}>Testimonials</h1>
+                        <p className={styles["testimonial__description"]}>What our customers say about our work</p>
+                        <Card className={`${styles["testimonial__card"]} mb-5`}>
                             <Carousel
                                 indicators={false}
                                 controls={false}
@@ -41,12 +41,12 @@ const Testimonials = () => {
                                 slide={true}
                             >
                                 {testimonialData.map((item, index) => (
-                                    <Carousel.Item key={index}>
-                                        <Image src={item.image} width={84} height={84} layout="fixed" alt="Client" />
-                                        <h3>
+                                    <Carousel.Item key={index} className={styles["testimonial__item"]}>
+                                        <Image src={item.image} width={84} height={84} layout="fixed" alt="Client" className={styles["testimonial__image"]} />
+                                        <h3 className={styles["testimonial__client-title"]}>
                                             <Link href={item.link}>{item.title}</Link>
                                         </h3>
-                                        <p className={styles["testimonial-text"]}>{item.text}</p>
+                                        <p className={styles["testimonial__text"]}>{item.text}</p>
                                     </Carousel.Item>
                                 ))}
                             </Carousel>

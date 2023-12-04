@@ -12,16 +12,16 @@ import styles from "@/styles/Home.module.scss";
 
 const Footer = () => {
     return (
-        <footer className={styles["footer"]}>
-            <div className={styles["footer-top"]}>
+        <footer className={styles.footer}>
+            <div className={styles["footer__top"]}>
                 <Container>
                     <Row>
-                        <Col md={4} className={styles["footer-col"]}>
-                            <h5>ADDRESS</h5>
-                            <FaMapMarkerAlt />
-                            <p>
+                        <Col md={4} className={styles["footer__col"]}>
+                            <h5 className={styles["footer__heading"]}>ADDRESS</h5>
+                            <FaMapMarkerAlt className={styles["footer__icon"]} />
+                            <p className={styles["footer__text"]}>
                                 Seanergy Digital Inc.
-                                <span>
+                                <span className={styles["footer__text__address"]}>
                                     <br />
                                     7800 Preston RD #115
                                     <br />
@@ -29,27 +29,27 @@ const Footer = () => {
                                 </span>
                             </p>
                         </Col>
-                        <Col md={4} className={styles["footer-col"]}>
-                            <h5>GET IN TOUCH</h5>
-                            <FaPhone />
-                            <span>+1-469-353-2525</span>
+                        <Col md={4} className={styles["footer__col"]}>
+                            <h5 className={styles["footer__heading"]}>GET IN TOUCH</h5>
+                            <FaPhone className={styles["footer__icon"]} />
+                            <span className={styles["footer__info"]}>+1-469-353-2525</span>
                             <br />
-                            <FaEnvelope />
-                            <span>contact@seanergydigital.com</span>
+                            <FaEnvelope className={styles["footer__icon"]} />
+                            <span className={styles["footer__info"]}>contact@seanergydigital.com</span>
                         </Col>
-                        <Col md={4} className={styles["footer-col"]}>
-                            <h5>FOLLOW US</h5>
-                            <div className="social-icons">
-                                <FaFacebookF />
-                                <FaTwitter />
-                                <FaLinkedinIn />
+                        <Col md={4} className={styles["footer__col"]}>
+                            <h5 className={styles["footer__heading"]}>FOLLOW US</h5>
+                            <div className={styles["footer__social-icons"]}>
+                                <FaFacebookF className={styles["footer__social-icons__social-icon"]} />
+                                <FaTwitter className={styles["footer__social-icons__social-icon"]} />
+                                <FaLinkedinIn className={styles["footer__social-icons__social-icon"]} />
                             </div>
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <div className={styles["footer-bottom"]}>
-                <p className="m-0">Seanergy Digital © 2023</p>
+            <div className={styles["footer__bottom"]}>
+                <p className={styles["footer__bottom__copyright"]}>Seanergy Digital © 2023</p>
             </div>
         </footer>
     );

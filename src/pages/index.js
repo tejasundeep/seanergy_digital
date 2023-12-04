@@ -3,7 +3,9 @@ import NavBar from "@/components/navbar";
 import Banner from "@/components/banner";
 import Industries from "@/components/industries";
 import OurOfferings from "@/components/offers";
+import CoreValues from "@/components/core_values";
 import SuccessStories from "@/components/success_stories";
+import Certifications from "@/components/certifications";
 import Testimonials from "@/components/testimonal";
 import Footer from "@/components/footer";
 
@@ -31,6 +33,8 @@ const Home = () => {
                 <Industries />
                 <OurOfferings />
                 <SuccessStories />
+                <CoreValues />
+                <Certifications />
                 <Testimonials />
                 <Footer />
             </main>

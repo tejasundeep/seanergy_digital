@@ -17,10 +17,10 @@ const Banner = React.memo(({ bannerText }) => {
                 quality={100} 
                 priority 
             />
-            <div className={bannerText.align}>
-                <h3 className="pb-4" dangerouslySetInnerHTML={{ __html: bannerText.title && bannerText.title }} />
-                <p className="my-4">{bannerText.description && bannerText.description}</p>
-                <a className='btn btn-primary' href={bannerText.link}>Know More</a>
+            <div className={`${styles.banner__content} ${bannerText.align}`}>
+                <h3 className={styles.banner__title} dangerouslySetInnerHTML={{ __html: bannerText.title && bannerText.title }} />
+                <p className={styles.banner__description}>{bannerText.description && bannerText.description}</p>
+                <a className={`${styles.banner__button} btn btn-primary`} href={bannerText.link}>Know More</a>
             </div>
         </section>
     );
