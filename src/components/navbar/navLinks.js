@@ -1,9 +1,9 @@
 const navLinks = [
-    { text: 'Home', href: '#home' },
+    { text: 'Home', href: '/' },
     {
         text: 'Corporate',
         dropdownItems: [
-            { text: 'About Us', href: 'AboutUs' },
+            { text: 'About Us', href: 'about' },
             { text: 'Careers', href: 'Careers' },
             { text: 'Events', href: 'Events' },
         ],

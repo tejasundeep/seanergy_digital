@@ -46,7 +46,7 @@ const NavBar = () => {
     return (
         <Navbar data-bs-theme={theme} expand="lg" fixed="top" className="py-4">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <Image
                         src="/Logo.png"
                         alt="Company Logo"

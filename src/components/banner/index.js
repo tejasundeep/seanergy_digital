@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import styles from "@/styles/Home.module.scss";
 import Image from "next/legacy/image";
+import { Col, Container, Row } from 'react-bootstrap';
 
 const Banner = React.memo(({ bannerText }) => {
     const blurDataUrl = useMemo(() => bannerText.image, [bannerText.image]);
@@ -17,11 +18,18 @@ const Banner = React.memo(({ bannerText }) => {
                 quality={100} 
                 priority 
             />
-            <div className={`${styles.banner__content} ${bannerText.align}`}>
-                <h3 className={styles.banner__title} dangerouslySetInnerHTML={{ __html: bannerText.title && bannerText.title }} />
-                <p className={styles.banner__description}>{bannerText.description && bannerText.description}</p>
-                <a className={`${styles.banner__button} btn btn-primary`} href={bannerText.link}>Know More</a>
-            </div>
+            <Container>
+                <Row>
+                    <Col>
+                    <div className={`${styles.banner__content} ${bannerText.align}`}>
+                        <h3 className={styles.banner__title} dangerouslySetInnerHTML={{ __html: bannerText.title && bannerText.title }} />
+                        {bannerText.description && <p className={styles.banner__description}>{bannerText.description}</p>}
+                        {bannerText.link && <a className={`${styles.banner__button} btn btn-primary`} href={bannerText.link}>Know More</a>}
+                    </div>
+                    </Col>
+                </Row>
+            </Container>
+
         </section>
     );
 });
