@@ -2,6 +2,10 @@ import MetaData from "@/components/head";
 import NavBar from "@/components/navbar";
 import Banner from "@/components/banner";
 import Industries from "@/components/industries";
+import OurOfferings from "@/components/offers";
+import SuccessStories from "@/components/success_stories";
+import Testimonials from "@/components/testimonal";
+import Footer from "@/components/footer";
 
 const Home = () => {
     const bannerData = {
@@ -25,6 +29,10 @@ const Home = () => {
                 <NavBar />
                 <Banner bannerText={bannerData} />
                 <Industries />
+                <OurOfferings />
+                <SuccessStories />
+                <Testimonials />
+                <Footer />
             </main>
         </>
     );

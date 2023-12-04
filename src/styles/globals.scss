@@ -35,11 +35,18 @@ img {
 }
 
 .navbar-nav{
-    a {
+    a.nav-link {
         font-weight: bold;
         margin: 0 0.85rem;
         line-height: 3rem;
-        text-transform: uppercase;  
+        text-transform: uppercase;
+    }
+    .dropdown-menu {
+        a {
+            font-weight: bold;
+            line-height: 3rem;
+            text-transform: uppercase; 
+        }
     }
     button {
         font-size: 1.5rem;

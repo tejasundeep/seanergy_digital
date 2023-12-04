@@ -6,7 +6,7 @@ const Industries = () => {
     return (
         <section className={styles["industries"]}>
             <h1>Industries</h1>
-            <Container className="pt-5">
+            <Container className="pt-3">
                 <Row>
                     <Col sm="12" md="5" className={styles["industries__col"]}>
                         <Link href="">
